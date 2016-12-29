@@ -1,0 +1,14 @@
+
+## 主要技术栈
+
+# nodejs 6.9.2 TLS + express
+# react
+# 
+
+## 包含功能和特性
+# 基本的登录注册
+# 数据库连接
+# controller端使用最新的yield语法
+# react接入
+# 添加dockerfile
+# 热加载
