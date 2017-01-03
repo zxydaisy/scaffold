@@ -8,7 +8,7 @@ const config = {
 
   // mongodb的配置
   dbUrl: 'mongodb://127.0.0.1/web',
-  sessionSecret: 'web', // 需要修改
+  sessionSecret: '', // 需要修改
 }
 
 module.exports = config;
