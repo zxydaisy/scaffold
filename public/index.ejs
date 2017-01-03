@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ./head.ejs%>
+    <% console.log(G);%>
+    <link href="<%= G.staticPath %>/css/index.css" rel="stylesheet" />
+</head>
+<body></body>
+
+<script>
+  window.VAR = <%- G.scriptVar %>;
+  window.BASE_URL = '<%= G.staticPath %>/';
+</script>
+
+<script src="<%= G.staticPath %>/common.js" > </script>
+<script src="<%= G.staticPath %>/index.js" > </script>
+</html>

@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ./head.ejs %>
+  <link href="<%= G.staticPath %>/css/auth.css" rel="stylesheet" />
+</head>
+<body>
+  <div id='auth'></div>
+</body>
+<script>
+  window.VAR = <%- G.scriptVar %>;
+  window.BASE_URL = '<%= G.staticPath %>/';
+</script>
+<script src="<%= G.staticPath %>/common.js" ></script>
+<script src="<%= G.staticPath %>/auth.js" ></script>
+</html>

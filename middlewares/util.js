@@ -1,3 +1,4 @@
+"use strict";
 
 const crypto = require('crypto');
 const util = require('util');
@@ -11,7 +12,7 @@ const mod = {
    * @returns {*}
    */
   md5(str) {
-    var md5sum = crypto.createHash('md5');
+    const md5sum = crypto.createHash('md5');
     md5sum.update(str);
     str = md5sum.digest('hex');
     return str;

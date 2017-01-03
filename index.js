@@ -1,8 +1,8 @@
 
 
-const app = require('../app').app;
-const redisStore = require('../app').redisStore;
-const config = require('../config');
+const app = require('./app');
+const config = require('./config');
+const http = require('http');
 
 const port = normalizePort(process.env.PORT || config.port);
 app.set('port', port);

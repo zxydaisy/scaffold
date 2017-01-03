@@ -2,6 +2,9 @@
 const util = require('../middlewares/util');
 
 module.exports = {
+  auth(req, res) {
+    res.render('auth');
+  },
   api: {
     login(req, res) {
       const name = req.body.name && req.body.name.trim();
