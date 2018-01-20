@@ -5,13 +5,22 @@
     <% console.log(G);%>
     <link href="<%= G.staticPath %>/css/index.css" rel="stylesheet" />
 </head>
-<body></body>
+<body>
+  <div class="watch-face" style="--nc: 6;">
+    <div class="circle" style="--i: 0;"></div>
+    <div class="circle" style="--i: 1;"></div>
+    <div class="circle" style="--i: 2;"></div>
+    <div class="circle" style="--i: 3;"></div>
+    <div class="circle" style="--i: 4;"></div>
+    <div class="circle" style="--i: 5;"></div>
+  </div>
+</body>
 
 <script>
   window.VAR = <%- G.scriptVar %>;
   window.BASE_URL = '<%= G.staticPath %>/';
 </script>
 
-<script src="<%= G.staticPath %>/common.js" > </script>
-<script src="<%= G.staticPath %>/index.js" > </script>
+<!-- <script src="<%= G.staticPath %>/common.js" > </script>
+<script src="<%= G.staticPath %>/index.js" > </script> -->
 </html>

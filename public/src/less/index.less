@@ -1,4 +1,48 @@
+@n: 6;
+@d: 8em;
+@r: .5*@d;
 
-.main {
-  color: red;
+body {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background: #000
+}
+
+.watch-face {
+	position: relative;
+}
+
+.circle {
+	position: absolute;
+	margin: -@r;
+	width: @d; height: @d;
+	border-radius: 50%;
+	background: #61bea2;
+	mix-blend-mode: screen;
+	
+	@supports not (mix-blend-mode: screen) {
+		opacity: .75
+	}
+	
+	&:nth-child(1 /* = 0 + 1 */) {
+    transform: rotate(-60deg /* -1·60° = (0 - 1)·60° */) translate(@r);
+  }
+  &:nth-child(2 /* = 1 + 1 */) {
+    transform: rotate(  0deg /*  0·60° = (1 - 1)·60° */) translate(@r);
+  }
+  &:nth-child(3 /* = 2 + 1 */) {
+    transform: rotate( 60deg /*  1·60° = (2 - 1)·60° */) translate(@r);
+  }
+  &:nth-child(4 /* = 3 + 1 */) {
+    transform: rotate(120deg /*  2·60° = (3 - 1)·60° */) translate(@r);
+  }
+  &:nth-child(5 /* = 4 + 1 */) {
+    transform: rotate(180deg /*  3·60° = (4 - 1)·60° */) translate(@r);
+  }
+  &:nth-child(6 /* = 5 + 1 */) {
+    transform: rotate(240deg /*  4·60° = (5 - 1)·60° */) translate(@r);
+  }
 }

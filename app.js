@@ -23,20 +23,20 @@ app.use(busboy());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // 连接redis的配置
-const redisStore = new RedisStore({
-  host: config.redisHost,
-  port: config.redisPort,
-});
+// const redisStore = new RedisStore({
+//   host: config.redisHost,
+//   port: config.redisPort,
+// });
 
-const sessionOption = {
-  secret: config.sessionSecret,
-  resave: false,
-  saveUninitialized: false,
-  store: redisStore,
-};
+// const sessionOption = {
+//   secret: config.sessionSecret,
+//   resave: false,
+//   saveUninitialized: false,
+//   store: redisStore,
+// };
 
-app.use(session(sessionOption));
-app.use(cookieParser());
+// app.use(session(sessionOption));
+// app.use(cookieParser());
 // 报错之后不重启
 app.use(require('express-domain-middleware'));
 
